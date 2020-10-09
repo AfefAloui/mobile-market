@@ -1,0 +1,96 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Style the header */
+header {
+  position: static;
+  width: 100%;
+}
+
+/* Container for flexboxes */
+.row {
+  display: -webkit-flex;
+  display: flex;
+  margin-top:10px;
+}
+
+/* Create three unequal columns that sits next to each other */
+.column {
+  padding: 15px;
+  height: 550px; /* Should be removed. Only for demonstration */
+  margin-left:5px;
+  background-color: white;
+}
+
+/* Left and right column */
+.column.side {
+   -webkit-flex: 1;
+   -ms-flex: 1;
+   flex: 1;
+}
+
+/* Middle column */
+.column.middle {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+header ul {
+  list-style-type: none;
+  margin-top: 0px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+header ul li {
+  float: left;
+}
+ header input, header button{
+  float: right;
+ }
+
+header ul li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+header ul li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+
+.dropdown:hover {
+  display: block;
+}
